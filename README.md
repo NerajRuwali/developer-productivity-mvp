@@ -2,6 +2,8 @@
 
 A React-based dashboard that analyzes engineering team data and generates actionable insights using multi-metric reasoning. Built as an MVP to demonstrate product thinking, data-driven decision making, and clean frontend architecture.
 
+Link - developer-productivity-mvp.vercel.app
+
 ## Features
 
 - **5 Key Metrics** — Cycle Time, Lead Time, Bug Rate, Deployment Frequency, PR Throughput
