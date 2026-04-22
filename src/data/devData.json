@@ -1,0 +1,30 @@
+{
+  "issues": [
+    { "id": "ISS-101", "title": "Login page redesign", "startDate": "2024-03-01", "endDate": "2024-03-04" },
+    { "id": "ISS-102", "title": "API rate limiter", "startDate": "2024-03-02", "endDate": "2024-03-09" },
+    { "id": "ISS-103", "title": "Dashboard filters", "startDate": "2024-03-05", "endDate": "2024-03-07" },
+    { "id": "ISS-104", "title": "User profile settings", "startDate": "2024-03-06", "endDate": "2024-03-14" },
+    { "id": "ISS-105", "title": "Search optimization", "startDate": "2024-03-08", "endDate": "2024-03-11" },
+    { "id": "ISS-106", "title": "Notification service", "startDate": "2024-03-10", "endDate": "2024-03-18" },
+    { "id": "ISS-107", "title": "Payment gateway integration", "startDate": "2024-03-12", "endDate": "2024-03-15" },
+    { "id": "ISS-108", "title": "Email template system", "startDate": "2024-03-14", "endDate": "2024-03-17" }
+  ],
+  "prs": [
+    { "id": "PR-201", "title": "feat: login redesign", "createdDate": "2024-03-03", "mergedDate": "2024-03-05", "status": "merged" },
+    { "id": "PR-202", "title": "feat: rate limiter middleware", "createdDate": "2024-03-07", "mergedDate": "2024-03-12", "status": "merged" },
+    { "id": "PR-203", "title": "feat: dashboard filters", "createdDate": "2024-03-06", "mergedDate": "2024-03-08", "status": "merged" },
+    { "id": "PR-204", "title": "fix: profile settings crash", "createdDate": "2024-03-10", "mergedDate": "2024-03-15", "status": "merged" },
+    { "id": "PR-205", "title": "feat: search index rebuild", "createdDate": "2024-03-10", "mergedDate": "2024-03-12", "status": "merged" },
+    { "id": "PR-206", "title": "feat: notification service", "createdDate": "2024-03-15", "mergedDate": null, "status": "open" },
+    { "id": "PR-207", "title": "feat: payment gateway", "createdDate": "2024-03-14", "mergedDate": "2024-03-16", "status": "merged" }
+  ],
+  "deployments": [
+    { "id": "DEP-301", "date": "2024-03-05", "status": "success" },
+    { "id": "DEP-302", "date": "2024-03-12", "status": "success" }
+  ],
+  "bugs": [
+    { "id": "BUG-401", "title": "Login token expiry not handled", "severity": "high", "date": "2024-03-04" },
+    { "id": "BUG-402", "title": "Dashboard filters reset on navigation", "severity": "medium", "date": "2024-03-08" },
+    { "id": "BUG-403", "title": "Profile image upload fails on Safari", "severity": "low", "date": "2024-03-11" }
+  ]
+}
