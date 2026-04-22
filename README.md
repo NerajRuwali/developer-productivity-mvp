@@ -1,52 +1,62 @@
 # Developer Productivity Dashboard
 
+🔗 **Live Demo:** https://developer-productivity-mvp.vercel.app  
+
 A React-based dashboard that analyzes engineering team data and generates actionable insights using multi-metric reasoning. Built as an MVP to demonstrate product thinking, data-driven decision making, and clean frontend architecture.
 
-Link - developer-productivity-mvp.vercel.app
+---
 
 ## Features
 
-- **5 Key Metrics** — Cycle Time, Lead Time, Bug Rate, Deployment Frequency, PR Throughput
-- **Multi-Metric Insight Engine** — Combines multiple signals to generate meaningful insights instead of simple threshold checks
-- **Severity-Based Prioritization** — Insights are classified as CRITICAL, WARNING, or INFO and sorted by urgency
-- **Positive Signal Detection** — Highlights what is working well alongside problems for balanced analysis
-- **One-Line Summary** — Auto-generated summary with root-cause language for quick decision-making
+- **5 Key Metrics** — Cycle Time, Lead Time, Bug Rate, Deployment Frequency, PR Throughput  
+- **Multi-Metric Insight Engine** — Combines multiple signals to generate meaningful insights instead of simple threshold checks  
+- **Severity-Based Prioritization** — Insights are classified as CRITICAL, WARNING, or INFO and sorted by urgency  
+- **Positive Signal Detection** — Highlights what is working well alongside problems for balanced analysis  
+- **One-Line Summary** — Auto-generated summary with root-cause language for quick decision-making  
+
+---
 
 ## Tech Stack
 
-- **Frontend:** React 18 (Vite)
-- **Styling:** Vanilla CSS (Lavender theme)
-- **Logic:** Pure JavaScript (no external libraries)
-- **Data:** Static JSON (swappable with API)
+- **Frontend:** React 18 (Vite)  
+- **Styling:** Vanilla CSS (Lavender theme)  
+- **Logic:** Pure JavaScript (no external libraries)  
+- **Data:** Static JSON (swappable with API)  
+
+---
 
 ## Project Structure
 
-```
+```bash
 src/
 ├── components/
 │   ├── Dashboard.jsx      # Metric cards grid
-│   ├── MetricCard.jsx      # Individual metric display
-│   └── Insights.jsx        # Insight cards with severity badges
+│   ├── MetricCard.jsx     # Individual metric display
+│   └── Insights.jsx       # Insight cards with severity badges
 ├── utils/
-│   ├── metrics.js          # Metric calculation logic
-│   └── insights.js         # Multi-metric insight engine
+│   ├── metrics.js         # Metric calculation logic
+│   └── insights.js        # Multi-metric insight engine
 ├── data/
-│   └── devData.json        # Sample engineering data
-├── App.jsx                 # Main app - connects data, logic, and UI
-├── main.jsx                # React entry point
-└── index.css               # Global styles (lavender theme)
+│   └── devData.json       # Sample engineering data
+├── App.jsx                # Main app - connects data, logic, and UI
+├── main.jsx               # React entry point
+└── index.css              # Global styles (lavender theme)
 ```
+
+---
 
 ## Data Flow
 
-```
+```bash
 devData.json → calculateMetrics() → generateInsights() → UI Components
 ```
 
-1. Raw engineering data (issues, PRs, deployments, bugs) is loaded from JSON
-2. `calculateMetrics()` computes 5 productivity metrics from the raw data
-3. `generateInsights()` applies multi-metric reasoning rules to produce prioritized insights
-4. React components render the metrics and insights on the dashboard
+1. Raw engineering data (issues, PRs, deployments, bugs) is loaded from JSON  
+2. `calculateMetrics()` computes 5 productivity metrics from the raw data  
+3. `generateInsights()` applies multi-metric reasoning rules to produce prioritized insights  
+4. React components render the metrics and insights on the dashboard  
+
+---
 
 ## Metrics Explained
 
@@ -57,6 +67,8 @@ devData.json → calculateMetrics() → generateInsights() → UI Components
 | Bug Rate | Bugs as % of total issues | Quality |
 | Deployment Frequency | Number of deployments in period | Delivery |
 | PR Throughput | Number of merged PRs | Velocity |
+
+---
 
 ## Insight Engine
 
@@ -70,14 +82,16 @@ The insight engine uses **multi-metric reasoning** instead of simple if-else che
 | Dev Bottleneck | Cycle Time + PR Throughput | Spots stuck development work |
 | Positive Signal | PR Throughput (high) | Highlights strong delivery momentum |
 
-Each insight includes: **Problem**, **Reasoning**, **Context**, **Impact**, and **Action**.
+Each insight includes: **Problem, Reasoning, Context, Impact, and Action**.
+
+---
 
 ## Getting Started
 
 ### Prerequisites
 
-- Node.js 18+
-- npm
+- Node.js 18+  
+- npm  
 
 ### Installation
 
@@ -89,6 +103,8 @@ npm run dev
 ```
 
 The app will start at `http://localhost:5173/`
+
+---
 
 ## How to Swap Data
 
@@ -109,6 +125,8 @@ useEffect(() => {
 
 The metrics and insights logic remains unchanged.
 
+---
+
 ## Design Decisions
 
 | Decision | Reasoning |
@@ -119,17 +137,23 @@ The metrics and insights logic remains unchanged.
 | Top 4 insight cap | Prevents dashboard overload, forces prioritization |
 | Positive signals included | Balanced analysis builds trust in the tool |
 
+---
+
 ## Future Improvements
 
-- Trend detection across multiple sprints
-- Configurable thresholds per team
-- LLM-powered natural language summaries
-- API integration with GitHub/Jira
-- Team comparison view
+- Trend detection across multiple sprints  
+- Configurable thresholds per team  
+- LLM-powered natural language summaries  
+- API integration with GitHub/Jira  
+- Team comparison view  
+
+---
 
 ## Author
 
 **Neeraj Ruwali**
+
+---
 
 ## License
 
